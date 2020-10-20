@@ -1,0 +1,170 @@
+body{
+  margin:0;
+}
+
+.content{
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.contnet__movieImg{
+  width: 25%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contnet__movieImg-poster{
+  width: 80%;
+  border-radius: 4px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.content__movieTicket{
+  width: 35%;
+  padding:20px;
+}
+
+.content__movieMap{
+  width: 40%;
+}
+
+.content__bgBlur{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: -1;
+  backdrop-filter: blur(10px);
+}
+
+.content__background{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: url(https://movie-phinf.pstatic.net/20200805_260/1596603002193WdUdN_JPEG/movie_image.jpg);
+  background-size: cover;
+  z-index: -2;
+}
+
+.overlaybox{
+  position: relative;
+}
+
+.overlaybox > svg{
+  height:54px;
+  opacity:.6;
+}
+
+.overlaybox .cinemaLogo{
+  max-width: 32px;
+  position:absolute;
+  top: 3px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.overlaybox .cinemaLogo.lotte{
+  width:28px;
+  top: 6px;
+}
+
+.content__movieTicket-search{
+  width:100%;
+  padding:18px;
+  border: 0;
+}
+
+.previewMovieBox{
+  display: none;
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 1;
+  background:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition:all .3s;
+}
+
+.previewMovieBox.active{
+  display: block;
+  z-index: 1;
+  opacity: 1;
+}
+
+.previewMovieBox .closeBtn{
+  position:absolute;
+  bottom:40px;
+  right:40px;
+  border:1px solid #fff;
+  background:none;
+  color:#fff;
+  padding:12px 36px;
+  z-index:2;
+  cursor: pointer;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition:all .3s;
+}
+
+.previewMovieBox .closeBtn:hover{
+  background:#fff;
+  color:#444;
+}
+
+.previewMovieBox > div{
+  position: absolute;
+  top:100px;
+  left:100px;
+  right:100px;
+  bottom:100px;
+  z-index: 1;
+}
+
+ul.content__movieTicket-info {
+  padding: 0;
+  margin: 40px 0;
+  list-style: none;
+  /* overflow-y: scroll; */
+  overflow:hidden;
+  height: calc(100% - 111px);
+}
+
+.content__movieTicket-info-logo {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+}
+
+img.cinemaLogo {
+}
+
+.content__movieTicket-info li {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.content__movieTicket-info h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.content__movieTicket-info p {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.content__movieTicket-info-text {
+  margin-left: 12px;
+}
